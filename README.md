@@ -26,7 +26,7 @@
 本リポジトリは、論文「Linear Models vs. Gradient Boosting: A Systematic Comparison of Efficiency, Extrapolation, and Interpretability」（JMLR 投稿予定）の実験コード・生成物（図表・CSV）を、日本語利用者向けに公開するものです。コード内コメント・標準出力・図表タイトルなどは日本語対応です。英語版リポジトリは別途公開予定です。
 
 ## 概要
-- 対象モデル: 線形モデル（Linear/Ridge/Lasso/Logistic）と GBDT（XGBoost/LightGBM）。
+- 対象モデル: 線形モデル（Linear/Ridge/Lasso/Logistic）、Random Forest（ex4/ex5）、GBDT（XGBoost/LightGBM）。
 - 評価軸: 予測性能、計算コスト（学習/推論）、解釈性コスト（SHAP 計算時間）、外挿性能、過学習耐性。
 - 再現性: 30 回反復＋Optuna によるハイパーパラメータチューニング（各 50 試行）で統計的に安定な比較を実施。ランダムシードは各実験で固定（例: 42 + 実験ID）。
 
