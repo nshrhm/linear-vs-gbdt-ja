@@ -1,0 +1,26 @@
+name: ドキュメント改善
+description: README/チュートリアル/コメント等の改善提案
+title: "docs: <短い説明>"
+labels: [documentation]
+body:
+  - type: textarea
+    id: target
+    attributes:
+      label: 対象
+      placeholder: 例) README の「実行時間の目安」、図表キャプション、FAQ など
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 変更提案の内容
+      placeholder: 具体的な追記/修正内容、参考リンク
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景・意図（任意）
+

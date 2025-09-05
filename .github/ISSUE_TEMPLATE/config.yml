@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 一般的な質問・相談
+    url: https://github.com/nshrhm/linear-vs-gbdt-ja/discussions
+    about: 使い方や方針の相談は Discussions を推奨します
+

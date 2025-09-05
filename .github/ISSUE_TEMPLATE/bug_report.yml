@@ -1,0 +1,82 @@
+name: バグ報告
+description: 実行時エラーや期待と異なる挙動の報告
+title: "bug: <短い説明>"
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        事前に既存の Issue を検索し、重複でないことをご確認ください。
+
+  - type: checkboxes
+    id: prechecks
+    attributes:
+      label: 事前確認
+      options:
+        - label: 既存の Issue を検索し、重複ではありません
+          required: true
+        - label: 最小再現コード（または手順）を用意しました
+          required: true
+        - label: Python と依存関係のバージョンを記載します
+          required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 影響範囲（複数選択可）
+      multiple: true
+      options:
+        - ex1_model_comparison_linearity.py
+        - ex2_low_interaction_comparison.py
+        - ex3_extrapolation_comparison.py
+        - ex4_small_sample_comparison.py
+        - ex5_interpretability_comparison.py
+        - plotting.py
+        - test_plots.py
+        - verification/other
+
+  - type: input
+    id: commit
+    attributes:
+      label: コミット SHA（任意）
+      description: 不具合が発生したコミット（例: abcdef1）
+      placeholder: abcdef1
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 再現手順
+      description: 実行コマンド・入力・前提条件を含めてください
+      placeholder: |
+        1. `python3 ex1_model_comparison_linearity.py` を実行
+        2. ...
+        期待: 〜、実際: 〜
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待される挙動
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の挙動・ログ（必要に応じてスクリーンショット）
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境情報
+      description: OS/CPU、Python、主要パッケージのバージョン
+      placeholder: |
+        OS: Ubuntu 22.04 / macOS 14
+        Python: 3.11.9 (`python -V`)
+        pip: 24.x (`pip -V`)
+        ライブラリ: `pip show numpy pandas scikit-learn xgboost lightgbm shap` の出力
+
