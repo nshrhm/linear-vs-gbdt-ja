@@ -21,6 +21,7 @@ body:
           required: true
         - label: 実行ログ/エラーログを添付しました（または再現ログを下記に記載しました）
           required: true
+        - label: 可能なら「最小再現用データ」（CSV/JSON/乱数seedで再生成可な小規模データ等）を添付しました（または生成コードを下記に記載しました）
 
   - type: dropdown
     id: scope
@@ -102,3 +103,20 @@ body:
         Python: 3.11.9 (`python -V`)
         pip: 24.x (`pip -V`)
         ライブラリ: `pip show numpy pandas scikit-learn xgboost lightgbm shap` の出力
+
+  - type: textarea
+    id: pip_freeze
+    attributes:
+      label: 依存関係一覧（pip freeze）
+      description: `pip freeze` または `pip list --format=freeze` の出力を貼り付けてください（長い場合はファイル添付でも可）。
+      placeholder: |
+        ```
+        $ pip freeze
+        numpy==1.26.4
+        pandas==2.2.2
+        scikit-learn==1.4.2
+        ...
+        ```
+      render: text
+    validations:
+      required: false
