@@ -81,6 +81,17 @@ pip install numpy pandas scikit-learn matplotlib seaborn japanize-matplotlib \
 - `lightgbm` は公式ホイールで多くの環境に対応しています。ビルドに失敗する場合は公式ドキュメントをご参照ください。
 - ネットワークが使えない環境でも実行できますが、ex5 は OpenML からのデータ取得を試みます。失敗時は自動的に人工データへフォールバックします。
 
+## Random Forest の補足
+- 位置づけ: 非線形・非パラメトリックな木ベースのベースラインとして、ex4（回帰）/ex5（分類）に含めています。
+- ハイパーパラメータ（本実装）
+  - 回帰: `RandomForestRegressor(n_estimators=100, max_depth=None, max_features=1.0, min_samples_leaf=1, bootstrap=True, n_jobs=-1, random_state=seed)`
+  - 分類: `RandomForestClassifier(n_estimators=100, max_depth=None, max_features='sqrt', min_samples_leaf=1, bootstrap=True, n_jobs=-1, random_state=seed)`
+- チューニング: 本比較では RF はデフォルト相当（上記）で固定し、Optuna による探索は行っていません（GBDT のみチューニング）。必要に応じて `n_estimators` や `max_depth`、`max_features` 等の探索を追加可能です。
+- 計算特性: 木ごとの並列化が効くため `n_jobs=-1` で高速化しています。学習/推論はいずれも高速な部類ですが、`n_estimators` を増やすと線形にコストが増加します。
+- 外挿性: 決定木ベースのため出力は区分的定数で、訓練範囲外での外挿は苦手です（GBDT と同様）。
+- 解釈性: 不純度ベースの重要度は取得可能ですが、分布やスケールに依存したバイアスがあり得ます。厳密な比較には置換重要度や SHAP を推奨します（本リポジトリの SHAP 図は LightGBM のみ）。
+- 再現性: すべての実験で `random_state` を固定しています。OOB スコアは使用していません（必要に応じて `oob_score=True` を有効化してください）。
+
 ## 実行方法
 - 単体実行（例: ex1）
 ```
