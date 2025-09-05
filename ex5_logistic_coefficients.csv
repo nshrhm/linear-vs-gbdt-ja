@@ -1,0 +1,62 @@
+Feature,Coefficient
+purpose_education,0.8688890306426635
+property_magnitude_no known property,0.6349775967982408
+checking_status_<0,0.5854778932895899
+savings_status_<100,0.5771341970654158
+credit_history_no credits/all paid,0.49696966094705153
+purpose_new car,0.48004846223573827
+housing_rent,0.46342766189280754
+purpose_repairs,0.415288294251207
+foreign_worker_yes,0.41076775563822493
+installment_commitment,0.38178385484627264
+personal_status_male div/sep,0.38000239448845774
+duration,0.3279240250546596
+credit_amount,0.32247805591002826
+employment_unemployed,0.31543218587432287
+other_payment_plans_bank,0.3112990550782213
+other_parties_co applicant,0.29507840577762917
+savings_status_100<=X<500,0.2658531173779474
+credit_history_all paid,0.23240267358441036
+employment_<1,0.21616973757093308
+checking_status_0<=X<200,0.2029501356422066
+num_dependents,0.12112406928665208
+existing_credits,0.08824776045456835
+job_skilled,0.043202817269159435
+job_unskilled resident,0.04102507275537414
+savings_status_500<=X<1000,0.024690275392107105
+own_telephone_none,0.015265918493653486
+purpose_furniture/equipment,0.014378398178832888
+residence_since,0.012798310169804093
+personal_status_female div/dep/mar,0.005794039983183784
+other_parties_none,-0.03799716548581896
+credit_history_existing paid,-0.041139649692072906
+age,-0.05582456639228434
+housing_own,-0.06193324184873374
+purpose_domestic appliance,-0.0820089177194097
+job_high qualif/self emp/mgmt,-0.08495455061596392
+other_payment_plans_stores,-0.09207284343347197
+employment_>=7,-0.09355270129686424
+personal_status_male mar/wid,-0.09892565216686519
+checking_status_>=200,-0.11858174528320224
+credit_history_delayed previously,-0.118908588822724
+purpose_business,-0.12561554505871916
+employment_1<=X<4,-0.134730174651573
+property_magnitude_car,-0.20980301753433894
+purpose_radio/tv,-0.2329775278535871
+property_magnitude_life insurance,-0.27556209405981846
+job_unemp/unskilled non res,-0.2877219195507738
+own_telephone_yes,-0.3037144986357951
+purpose_retraining,-0.37143999978083647
+property_magnitude_real estate,-0.4380610653462667
+savings_status_no known savings,-0.4845199905132901
+other_payment_plans_none,-0.5076747917869306
+purpose_other,-0.5096519963957842
+other_parties_guarantor,-0.5455298204340401
+personal_status_male single,-0.5753193624469325
+employment_4<=X<7,-0.5917676276389856
+savings_status_>=1000,-0.6716061794643876
+housing_for free,-0.6899430001862884
+foreign_worker_no,-0.6992163357804848
+purpose_used car,-0.7453587786422858
+credit_history_critical/other existing credit,-0.8577726761588551
+checking_status_no checking,-0.9582948637907611
