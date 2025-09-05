@@ -1,5 +1,23 @@
 # linear-vs-gbdt-ja
 
+![Python 3.10–3.12](https://img.shields.io/badge/Python-3.10%E2%80%933.12-blue)
+[![License](https://img.shields.io/github/license/nshrhm/linear-vs-gbdt-ja)](LICENSE)
+![Last Commit](https://img.shields.io/github/last-commit/nshrhm/linear-vs-gbdt-ja)
+![Issues](https://img.shields.io/github/issues/nshrhm/linear-vs-gbdt-ja)
+![Stars](https://img.shields.io/github/stars/nshrhm/linear-vs-gbdt-ja?style=social)
+
+依存関係: 
+[![numpy](https://img.shields.io/badge/numpy-1.26.4-013243)](https://pypi.org/project/numpy/)
+[![pandas](https://img.shields.io/badge/pandas-2.2.2-150458)](https://pypi.org/project/pandas/)
+[![scikit--learn](https://img.shields.io/badge/scikit--learn-1.4.2-f89939)](https://pypi.org/project/scikit-learn/)
+[![scipy](https://img.shields.io/badge/scipy-1.11.4-8CAAE6)](https://pypi.org/project/scipy/)
+[![matplotlib](https://img.shields.io/badge/matplotlib-3.8.4-11557c)](https://pypi.org/project/matplotlib/)
+[![seaborn](https://img.shields.io/badge/seaborn-0.13.2-4c72b0)](https://pypi.org/project/seaborn/)
+[![optuna](https://img.shields.io/badge/optuna-3.6.1-3E79B5)](https://pypi.org/project/optuna/)
+[![shap](https://img.shields.io/badge/SHAP-0.42.1-ff7f0e)](https://pypi.org/project/shap/)
+[![xgboost](https://img.shields.io/badge/xgboost-3.0.0-EB5E28)](https://pypi.org/project/xgboost/)
+[![lightgbm](https://img.shields.io/badge/lightgbm-4.3.0-017E4A)](https://pypi.org/project/lightgbm/)
+
 本リポジトリは、論文「Linear Models vs. Gradient Boosting: A Systematic Comparison of Efficiency, Extrapolation, and Interpretability」（JMLR 投稿予定）の実験コード・生成物（図表・CSV）を、日本語利用者向けに公開するものです。コード内コメント・標準出力・図表タイトルなどは日本語対応です。英語版リポジトリは別途公開予定です。
 
 ## 概要
