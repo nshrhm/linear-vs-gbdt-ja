@@ -15,3 +15,8 @@ backup/
 docs/
 github_setup.sh
 main.tex
+ 
+# ローカル運用（非公開）
+journal/
+TODO.md
+PROBLEMS.md
