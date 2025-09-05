@@ -42,9 +42,11 @@
 - ex4: 小規模データにおける過学習耐性（回帰）
   - `ex4_small_sample_comparison.py`
   - 訓練/テストの RMSE・R2 と過学習係数を比較
+  - 注記: Random Forest（RandomForestRegressor）をベースラインとして含みます
 - ex5: 実データ（UCI German Credit）での分類性能と解釈性
   - `ex5_interpretability_comparison.py`
   - 前処理（StandardScaler/OneHotEncoder）＋パイプライン、ROC AUC/Accuracy/F1/Brier を評価、係数可視化と LightGBM+SHAP による解釈
+  - 注記: Random Forest（RandomForestClassifier）を比較対象として含みます（SHAP 図は LightGBM のみ）
 
 補助スクリプト
 - 一括実行: `run_batch.sh`（5 実験を順番に実行し `execution_log.txt` に記録）
@@ -53,6 +55,7 @@
 ## 生成物（主なファイル）
 スクリプト実行により以下が生成されます（英語版/日本語版の両方を保存）。
 - 図（PNG/PDF）: `ex1_model_comparison_plot[ _ja].{png,pdf}`、`ex2_low_interaction_plot[ _ja].{png,pdf}`、`ex3_extrapolation_comparison[ _ja].{png,pdf}`、`ex3_performance_metrics[ _ja].{png,pdf}`、`ex4_train_test_comparison[ _ja].{png,pdf}`、`ex4_overfitting_metrics[ _ja].{png,pdf}`、`ex5_classification_performance[ _ja].{png,pdf}`、`ex5_logistic_coefficients[ _ja].{png,pdf}`、`ex5_shap_summary[ _ja].{png,pdf}`
+  - 注記（図表キャプション）: ex4/ex5 の図は Random Forest を含みます（凡例に "Random Forest" が表示されます）。`ex5_shap_summary` は LightGBM の SHAP 要約であり、Random Forest には SHAP 図を適用していません。
 - 結果 CSV: `ex*_*_all_results.csv`、`ex*_*_summary_results.csv`、`ex5_logistic_coefficients.csv`
 
 本リポジトリには代表的な出力例（PNG/PDF/CSV）も同梱しています。
