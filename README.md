@@ -6,6 +6,11 @@
 ![Issues](https://img.shields.io/github/issues/nshrhm/linear-vs-gbdt-ja)
 ![Stars](https://img.shields.io/github/stars/nshrhm/linear-vs-gbdt-ja?style=social)
 
+[![CI](https://github.com/nshrhm/linear-vs-gbdt-ja/actions/workflows/ci.yml/badge.svg)](https://github.com/nshrhm/linear-vs-gbdt-ja/actions/workflows/ci.yml)
+![Tag](https://img.shields.io/github/v/tag/nshrhm/linear-vs-gbdt-ja?sort=semver)
+![Downloads](https://img.shields.io/github/downloads/nshrhm/linear-vs-gbdt-ja/total)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 依存関係: 
 [![numpy](https://img.shields.io/badge/numpy-1.26.4-013243)](https://pypi.org/project/numpy/)
 [![pandas](https://img.shields.io/badge/pandas-2.2.2-150458)](https://pypi.org/project/pandas/)
