@@ -19,6 +19,8 @@ body:
           required: true
         - label: Python と依存関係のバージョンを記載します
           required: true
+        - label: 実行ログ/エラーログを添付しました（または再現ログを下記に記載しました）
+          required: true
 
   - type: dropdown
     id: scope
@@ -64,10 +66,31 @@ body:
   - type: textarea
     id: actual
     attributes:
-      label: 実際の挙動・ログ（必要に応じてスクリーンショット）
+      label: 実際の挙動
+      description: 簡潔に「何が起きたか」を記載してください（エラー文/ログは下の欄へ）
       render: text
     validations:
       required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: ログ（Traceback/標準出力/標準エラー）
+      description: |
+        可能な限りログを添付してください。長い場合はファイル添付（ドラッグ&ドロップ）や Gist 等のリンクでも構いません。
+        参考: 実行コマンド、直前の Traceback、フルのエラーメッセージ、関連する警告など。
+      placeholder: |
+        ```
+        $ python3 ex1_model_comparison_linearity.py
+        Traceback (most recent call last):
+          File "ex1_model_comparison_linearity.py", line 123, in <module>
+            main()
+        ...
+        Exception: <エラーメッセージ>
+        ```
+      render: text
+    validations:
+      required: false
 
   - type: textarea
     id: environment
@@ -79,4 +102,3 @@ body:
         Python: 3.11.9 (`python -V`)
         pip: 24.x (`pip -V`)
         ライブラリ: `pip show numpy pandas scikit-learn xgboost lightgbm shap` の出力
-
